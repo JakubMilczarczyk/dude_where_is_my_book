@@ -1,0 +1,25 @@
+Rozszerzenie dwóch baz z normalizacją: schemat na GPT
+    Baza books z informacjami o książkach.
+    Baza borrowers z informacjami o pożyczających.
+    Dodatkowa tabela book_loans, która łączy książki z wypożyczeniami.
+Zalety:
+
+Dobre znormalizowanie danych.
+Łatwe śledzenie wypożyczeń, jednocześnie minimalizując redundancję.
+Wady:
+
+Wymaga bardziej złożonych zapytań przy wydobywaniu danych z obu baz.
+
+1. zrobić kontext manager który łączy się z bazą książek do wypożyczenia.
+    1.0 Obiekt pierwszy
+        1.01 funkcja pobiera nie pożyczone książki
+        1.02 funkcja daje możliwość wypożyczenia (przypisania osoby i terminu oddania)
+    1.1 Obiekt drugi
+        1.01 funkcja Sprawdza aktualną datę i pobiera tylko te książki którym minął termin na oddanie.
+            (to można dać w wywołaniu kontext managera)
+
+2. Po pojawieniu się książki do oddania wysyłamy maila ziomkowi który ją ma.
+    2.1 Kolejny obiekt
+        2.11 Po pojawieniu się książki do oddania wysyłamy maila ziomkowi który ją ma.
+        2.12 (opcja) Zaczynamy naliczać punkty karne za każdy dzień zwłoki
+    (Dobrze przemyśl pod kątem drugiego szkolenia tj zastosowania obiektów)
