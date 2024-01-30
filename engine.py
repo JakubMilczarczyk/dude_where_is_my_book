@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import datetime, timedelta
 
 
 def create_connection(baza):
@@ -51,12 +52,40 @@ class AccessibleBooks: # kontext manager łączy się plikiem który damy w init
 
         for book in self.cursor.fetchall():
             book_id, title, author, created_at = book
-            self.books.append({
+            self.books.append({           # TODO zamienić na tuple nazwane?
+                'id': book_id,
                 'title': title,
                 'author': author,
             })
 
         return self.books
+
+    def borrow_book(self,book_id, borrower_name, borrower_email):
+
+        #book_title  # TODO Odwołąć sie do tupli nazwanych?
+        current_date = datetime.now()
+        borrow_time = timedelta(days=30)
+        return_date = current_date + borrow_time
+
+        self.cursor.execute('SELECT id FROM borrowers WHERE name = ? AND email = ?;'), (borrower_name, borrower_email)
+        borrower_row = self.cursor.fetchone()
+
+        if borrower_row is None:
+            self.cursor.execute('INSERT INTO borrowers (name, email) VALUES (?, ?);', (borrower_name, borrower_email))
+            borrower_id = self.cursor.lastrowid
+        else:
+            borrower_id = borrower_row[0]
+
+        self.cursor.execute(
+            'INSERT INTO book_loans (book_id, borrower_id, loan_date, return_date) VALUES (?, ?, ?, ?);',
+            (book_id, borrower_id, borrower_email, current_date, return_date)
+        )
+
+        print(
+            f'Książka {book_title} o ID: {book_id}' # TODO rozwiązać problem pobierania tytułu
+            'została wypożyczona osobie o danych:'
+            f'{borrower_name}, {borrower_email}'
+        )
 
 
 with AccessibleBooks('baza.db') as ksiazki:
