@@ -10,13 +10,20 @@ Wady:
 
 Wymaga bardziej złożonych zapytań przy wydobywaniu danych z obu baz.
 
-1. zrobić kontext manager który łączy się z bazą książek do wypożyczenia.
-    1.0 Obiekt pierwszy
-        1.01 funkcja pobiera nie pożyczone książki
-        1.02 funkcja daje możliwość wypożyczenia (przypisania osoby i terminu oddania)
-    1.1 Obiekt drugi
-        1.01 funkcja Sprawdza aktualną datę i pobiera tylko te książki którym minął termin na oddanie.
-            (to można dać w wywołaniu kontext managera)
+0. Zrobić 3 klasy:
+    0.1 Obiekt pobierający książki z biblioteki i ich statusy (w bibliotece / pożyczona).
+    0.2 Obiekt zapisujący dane wypożyczenia (książkę, dane wypożyczającego i termin)
+    0.3 Obiekt manager biblioteki który łączy pozostałe obiekty i ułatwia zarządzanie.
+        (w razie potrzeby pomijalny ale też łatwo rozwijalny)
+
+Przed zmianami:
+    1. zrobić kontext manager który łączy się z bazą książek do wypożyczenia.
+        1.0 Obiekt pierwszy
+            1.01 funkcja pobiera nie pożyczone książki
+            1.02 funkcja daje możliwość wypożyczenia (przypisania osoby i terminu oddania)
+        1.1 Obiekt drugi
+            1.01 funkcja Sprawdza aktualną datę i pobiera tylko te książki którym minął termin na oddanie.
+                (to można dać w wywołaniu kontext managera)
 
 2. Po pojawieniu się książki do oddania wysyłamy maila ziomkowi który ją ma.
     2.1 Kolejny obiekt
