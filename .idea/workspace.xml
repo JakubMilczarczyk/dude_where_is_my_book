@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="I add method 'borrow_book' but need to finish it">
+    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="two classes are working but need tests and more functions like BorrowManager/return_book">
+      <change afterPath="$PROJECT_DIR$/engine_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baza.db" beforeDir="false" afterPath="$PROJECT_DIR$/baza.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plan.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,12 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706651745452</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="two classes are working but need tests and more functions like BorrowManager/return_book">
+      <option name="closed" value="true" />
+      <created>1706831782811</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706831782811</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kontext manager can check witch books are accessible" />
     <MESSAGE value="I add method 'borrow_book' but need to finish it" />
-    <option name="LAST_COMMIT_MESSAGE" value="I add method 'borrow_book' but need to finish it" />
+    <MESSAGE value="two classes are working but need tests and more functions like BorrowManager/return_book" />
+    <option name="LAST_COMMIT_MESSAGE" value="two classes are working but need tests and more functions like BorrowManager/return_book" />
   </component>
 </project>
