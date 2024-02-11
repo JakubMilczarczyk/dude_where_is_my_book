@@ -74,7 +74,6 @@ class BorrowManager:
         )
 
         for borrower in self.cursor.fetchall():
-            borrow_id, book_id, book_title, borrower_name, borrower_email, borrow_date, return_date = borrower
             Borrower = namedtuple(
                 'Borrower',
                 [
@@ -90,7 +89,6 @@ class BorrowManager:
 
             return self.borrowers
 
-
     def return_book(self, borrow_id):
         # ta metoda skasuje status wypożyczenia, historia wypożyczeń zostaje zapamiętana:
         pass
@@ -98,7 +96,5 @@ class BorrowManager:
 
 # happy testing
 with BorrowManager('baza.db') as pozycz:
-    borrowers = pozycz.get_borrowers()  # Uzupełnić i skasować przed poleceniem commit
-    for borrower in borrowers:
-        print(borrower)
+    pozycz.borrow_book(19, 'Kuba', 'adres e-mail')  # Uzupełnić i skasować przed poleceniem commit
 

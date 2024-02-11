@@ -34,7 +34,6 @@ class LibraryStatus:
         self.all_books = []
 
         for book in self.cursor.fetchall():
-            book_id, title, author, created_at = book
             Book = namedtuple(
                 'Book',
                 [
@@ -58,7 +57,6 @@ class LibraryStatus:
         self.available_books = []
 
         for book in self.cursor.fetchall():
-            book_id, title, author, created_at = book
             Book = namedtuple(
                 'Book',
                 [
@@ -84,7 +82,6 @@ class LibraryStatus:
         self.borrowed_books = []
 
         for borrow in self.cursor.fetchall():
-            borrow_id, book_id, book_title, borrower_name, borrow_date, return_date = borrow
             Borrow = namedtuple(
                 'Borrow',
                 [
