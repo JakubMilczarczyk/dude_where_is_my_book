@@ -7,7 +7,6 @@
     <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="manage files, tests need to be finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryStatus.py" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryStatus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibraryStatus_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryStatus_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baza.db" beforeDir="false" afterPath="$PROJECT_DIR$/baza.db" afterDir="false" />
     </list>
@@ -35,16 +34,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.BorrowManager.executor": "Run",
-    "Python.LibraryStatus.executor": "Run",
-    "Python.engine.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.BorrowManager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.LibraryStatus.executor&quot;: &quot;Run&quot;,
+    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -101,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707212119103</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="manage files, tests need to be finished">
+      <option name="closed" value="true" />
+      <created>1707693193404</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707693193404</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

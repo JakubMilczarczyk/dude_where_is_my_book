@@ -13,6 +13,7 @@ class BorrowManager:
         self.available_books = None
         self.borrowed_books = None
         self.borrowers = None
+        self.rentals_after_deadline = None
 
     def __enter__(self):
         self.library = sqlite3.connect(self.database)
@@ -26,6 +27,7 @@ class BorrowManager:
     def borrow_book(self, book_id, borrower_name, borrower_email):
 
         current_date = datetime.now()
+        current_date.strftime('%Y-%m-%d')   # na razie nie wykorzystywane
         borrow_time = timedelta(days=30)
         return_date = current_date + borrow_time
 
@@ -87,7 +89,19 @@ class BorrowManager:
                 ])
             self.borrowers.append(Borrower(*borrower))
 
-            return self.borrowers
+        return self.borrowers
+
+    def rentals_after_deadline(self):       # TODO wyrzuca błąd, sprawdź wywołanie metody self.get_borrowers
+        self.rentals_after_deadline = []
+        current_date = datetime.now()
+        current_date.strftime('%Y-%m-%d')
+
+        loans = self.get_borrowers()        # generowanej tutaj juz w tej metodzie
+        for borrower in loans:
+            if borrower.return_date != current_date:
+                self.rentals_after_deadline.append(borrower)
+
+        return self.rentals_after_deadline
 
     def return_book(self, borrow_id):
         # ta metoda skasuje status wypożyczenia, historia wypożyczeń zostaje zapamiętana:
@@ -96,5 +110,12 @@ class BorrowManager:
 
 # happy testing
 with BorrowManager('baza.db') as pozycz:
-    pozycz.borrow_book(19, 'Kuba', 'adres e-mail')  # Uzupełnić i skasować przed poleceniem commit
+    pozycz.borrow_book(19, 'Ania', 'adres e-mail')  # Uzupełnić i skasować przed poleceniem commit
 
+# with BorrowManager('baza.db') as baza:
+#     after_date = baza.rentals_after_deadline()
+#     print(after_date)
+#
+with BorrowManager('baza.db') as pozycz:
+    ludzie = pozycz.get_borrowers()
+    print(ludzie)
