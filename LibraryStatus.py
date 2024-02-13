@@ -88,7 +88,7 @@ class LibraryStatus:
                     'borrow_id',
                     'book_id',
                     'book_title',
-                    'borrower_name',
+                    'borrower_name',        # to nie jest potrzebne, wykasuj z cursor.execute
                     'borrow_date',
                     'return_date'
             ])

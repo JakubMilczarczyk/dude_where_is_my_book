@@ -12,8 +12,7 @@ class BorrowManager:
         self.all_books = None
         self.available_books = None
         self.borrowed_books = None
-        self.borrowers = None
-        self.rentals_after_deadline = None
+        self.borrows = None
 
     def __enter__(self):
         self.library = sqlite3.connect(self.database)
@@ -27,7 +26,6 @@ class BorrowManager:
     def borrow_book(self, book_id, borrower_name, borrower_email):
 
         current_date = datetime.now()
-        current_date.strftime('%Y-%m-%d')   # na razie nie wykorzystywane
         borrow_time = timedelta(days=30)
         return_date = current_date + borrow_time
 
@@ -54,17 +52,17 @@ class BorrowManager:
 
         self.cursor.execute(
             'INSERT INTO borrowed_books (book_id, borrower_id, borrow_date, return_date) VALUES (?, ?, ?, ?);',
-            (book_id, borrower_id, current_date, return_date)
+            (book_id, borrower_id, current_date.strftime('%Y-%m-%d'), return_date.strftime('%Y-%m-%d'))
         )
 
         print(
-            f'Ksiazka {book_title} o ID: {book_id}'
-            'zostala wypozyczona osobie o danych:'
+            f'Ksiazka {book_title} o ID: {book_id} '
+            'zostala wypozyczona osobie o danych: '
             f'{borrower_name}, {borrower_email}'
         )
 
-    def get_borrowers(self):
-        self.borrowers = []
+    def get_borrows(self):
+        self.borrows = []
 
         self.cursor.execute(
             'SELECT borrowed_books.borrow_id, borrowed_books.book_id, '
@@ -75,9 +73,9 @@ class BorrowManager:
             'JOIN books ON borrowed_books.book_id = books.id;'
         )
 
-        for borrower in self.cursor.fetchall():
-            Borrower = namedtuple(
-                'Borrower',
+        for borrow in self.cursor.fetchall():
+            Borrow = namedtuple(
+                'Borrow',
                 [
                     'borrow_id',
                     'book_id',
@@ -87,21 +85,21 @@ class BorrowManager:
                     'borrow_date',
                     'return_date'
                 ])
-            self.borrowers.append(Borrower(*borrower))
+            self.borrows.append(Borrow(*borrow))
 
-        return self.borrowers
+        return self.borrows
 
-    def rentals_after_deadline(self):       # TODO wyrzuca błąd, sprawdź wywołanie metody self.get_borrowers
-        self.rentals_after_deadline = []
+    def rentals_after_deadline(self):
+        rentals_after_deadline = []
+
         current_date = datetime.now()
-        current_date.strftime('%Y-%m-%d')
+        loans = self.get_borrows()    # Rozwiazanie chwilowe, napisz osobne zapytanie do bazy
 
-        loans = self.get_borrowers()        # generowanej tutaj juz w tej metodzie
         for borrower in loans:
-            if borrower.return_date != current_date:
-                self.rentals_after_deadline.append(borrower)
+            if borrower.return_date < current_date.strftime('%Y-%m-%d'):
+                rentals_after_deadline.append(borrower)
 
-        return self.rentals_after_deadline
+        return rentals_after_deadline
 
     def return_book(self, borrow_id):
         # ta metoda skasuje status wypożyczenia, historia wypożyczeń zostaje zapamiętana:
@@ -110,12 +108,13 @@ class BorrowManager:
 
 # happy testing
 with BorrowManager('baza.db') as pozycz:
-    pozycz.borrow_book(19, 'Ania', 'adres e-mail')  # Uzupełnić i skasować przed poleceniem commit
+    pozycz.borrow_book(13, 'Leon', 'adres e-mail')  # Uzupełnić i skasować przed poleceniem commit
 
-# with BorrowManager('baza.db') as baza:
-#     after_date = baza.rentals_after_deadline()
-#     print(after_date)
+with BorrowManager('baza.db') as baza:
+    after_date = baza.rentals_after_deadline()
+    print(after_date)
 #
-with BorrowManager('baza.db') as pozycz:
-    ludzie = pozycz.get_borrowers()
-    print(ludzie)
+# with BorrowManager('baza.db') as pozycz:
+#     ludzie = pozycz.get_borrows()
+#     for x in ludzie:
+#         print(x)
