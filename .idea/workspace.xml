@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="new working method in BorrowManager.py,&#10;tests need to be finished">
-      <change afterPath="$PROJECT_DIR$/sand_mail.py" afterDir="false" />
+    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="connection to MailTrap server,&#10;Template example">
+      <change afterPath="$PROJECT_DIR$/mail_testowy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sand_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/sand_mail.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +39,7 @@
     "Python.BorrowManager.executor": "Run",
     "Python.LibraryStatus.executor": "Run",
     "Python.engine.executor": "Run",
+    "Python.mail_testowy.executor": "Run",
     "Python.sand_mail.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -123,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707861668922</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="connection to MailTrap server,&#10;Template example">
+      <option name="closed" value="true" />
+      <created>1707946647085</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707946647085</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +155,7 @@
     <MESSAGE value="manage files, tests need to be finished" />
     <MESSAGE value="new method in BorrowManager.py,&#10;tests need to be finished" />
     <MESSAGE value="new working method in BorrowManager.py,&#10;tests need to be finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="new working method in BorrowManager.py,&#10;tests need to be finished" />
+    <MESSAGE value="connection to MailTrap server,&#10;Template example" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection to MailTrap server,&#10;Template example" />
   </component>
 </project>

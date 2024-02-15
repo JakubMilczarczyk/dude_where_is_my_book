@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 
 class BorrowManager:
 
-    def __init__(self, database_name):
-        self.database = database_name
+    def __init__(self, database):
+        self.database = database
         self.cursor = None
         self.library = None
         self.all_books = None
