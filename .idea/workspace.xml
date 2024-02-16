@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="connection to MailTrap server,&#10;Template example">
-      <change afterPath="$PROJECT_DIR$/mail_testowy.py" afterDir="false" />
+    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="New class to send emails, does'n work but i dont know where">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sand_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/sand_mail.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,18 +32,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.BorrowManager.executor": "Run",
-    "Python.LibraryStatus.executor": "Run",
-    "Python.engine.executor": "Run",
-    "Python.mail_testowy.executor": "Run",
-    "Python.sand_mail.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.BorrowManager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.LibraryStatus.executor&quot;: &quot;Run&quot;,
+    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mail_testowy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sand_mail.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -134,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707946647085</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="New class to send emails, does'n work but i dont know where">
+      <option name="closed" value="true" />
+      <created>1708039548575</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708039548575</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +162,7 @@
     <MESSAGE value="new method in BorrowManager.py,&#10;tests need to be finished" />
     <MESSAGE value="new working method in BorrowManager.py,&#10;tests need to be finished" />
     <MESSAGE value="connection to MailTrap server,&#10;Template example" />
-    <option name="LAST_COMMIT_MESSAGE" value="connection to MailTrap server,&#10;Template example" />
+    <MESSAGE value="New class to send emails, does'n work but i dont know where" />
+    <option name="LAST_COMMIT_MESSAGE" value="New class to send emails, does'n work but i dont know where" />
   </component>
 </project>
