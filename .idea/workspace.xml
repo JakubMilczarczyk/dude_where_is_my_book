@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="New class to send emails, does'n work but i dont know where">
+    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="&quot;for&quot; loop and SMTP server connection works better, does not work probably code in message is to complicated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_testowy.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_testowy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sand_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/sand_mail.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708039548575</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&quot;for&quot; loop and SMTP server connection works better, does not work probably code in message is to complicated">
+      <option name="closed" value="true" />
+      <created>1708122907613</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708122907613</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +172,7 @@
     <MESSAGE value="new working method in BorrowManager.py,&#10;tests need to be finished" />
     <MESSAGE value="connection to MailTrap server,&#10;Template example" />
     <MESSAGE value="New class to send emails, does'n work but i dont know where" />
-    <option name="LAST_COMMIT_MESSAGE" value="New class to send emails, does'n work but i dont know where" />
+    <MESSAGE value="&quot;for&quot; loop and SMTP server connection works better, does not work probably code in message is to complicated" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;for&quot; loop and SMTP server connection works better, does not work probably code in message is to complicated" />
   </component>
 </project>
