@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="&quot;for&quot; loop and SMTP server connection works better, does not work probably code in message is to complicated">
+    <list default="true" id="e24dea28-a506-4824-a6ae-7651a9e14684" name="Changes" comment="sand_mail.py works :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_testowy.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_testowy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sand_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/sand_mail.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +31,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.BorrowManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LibraryStatus.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mail_testowy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sand_mail.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.BorrowManager.executor": "Run",
+    "Python.LibraryStatus.executor": "Run",
+    "Python.engine.executor": "Run",
+    "Python.mail_testowy.executor": "Run",
+    "Python.sand_mail.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/kubab/PycharmProjects/Junior_na_sterydach/Junior_na_sterydach/junior_na_sterydach_kuby",
+    "settings.editor.selected.configurable": "preferences.updates"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -149,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708122907613</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="sand_mail.py works :)">
+      <option name="closed" value="true" />
+      <created>1708379435552</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708379435552</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +181,7 @@
     <MESSAGE value="connection to MailTrap server,&#10;Template example" />
     <MESSAGE value="New class to send emails, does'n work but i dont know where" />
     <MESSAGE value="&quot;for&quot; loop and SMTP server connection works better, does not work probably code in message is to complicated" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;for&quot; loop and SMTP server connection works better, does not work probably code in message is to complicated" />
+    <MESSAGE value="sand_mail.py works :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="sand_mail.py works :)" />
   </component>
 </project>
